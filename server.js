@@ -25,12 +25,15 @@ app.use(express.static("public"));
 // -------------------------------------------------
 
 // MongoDB configuration (Change this URL to your own DB)
-// mongoose.connect("mongodb://admin:codingrocks@ds023674.mlab.com:23674/heroku_5ql1blnl");
-var db = mongoose.connection;
-
-mongoose.connect("mongodb://localhost/nytreact", {
+mongoose.connect("mongodb://heroku_fsj0xkrs:v1ft6a770khn43835e4ka5qmlq@ds149134.mlab.com:49134/heroku_fsj0xkrs", {
   useMongoClient: true
 });
+
+var db = mongoose.connection;
+
+// mongoose.connect("mongodb://localhost/nytreact", {
+//   useMongoClient: true
+// });
 
 db.on("error", function(err) {
   console.log("Mongoose Error: ", err);
