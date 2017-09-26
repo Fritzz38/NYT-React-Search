@@ -6,7 +6,7 @@ var mongoose = require("mongoose");
 var path = require("path");
 
 // Require Article schema
-var Article = require("./models/article");
+var Article = require("./models/Article.js");
 
 // Create a new express app
 var app = express();
